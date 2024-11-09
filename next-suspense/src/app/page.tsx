@@ -1,9 +1,10 @@
 import { Suspense } from 'react'
+import * as db from '../db/count'
 
 async function SlowComponent() {
-  await new Promise((resolve) => setTimeout(resolve, 5000))
+  const count = await db.getCount()
 
-  return <div>SlowComponent</div>
+  return <div>SlowComponent {count}</div>
 }
 
 export default function Home() {

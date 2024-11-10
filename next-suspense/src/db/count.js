@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const countFilePath = path.join(__dirname, 'count.txt')
+console.log('le countFilePath', countFilePath)
 
 const readCountFromFile = () => {
   try {

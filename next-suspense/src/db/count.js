@@ -29,7 +29,7 @@ const writeCountToFile = (count) => {
 const sleep = async (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export async function increment() {
-  const count = readCountFromFile()
+  let count = readCountFromFile()
   count++
   writeCountToFile(count)
 
@@ -38,7 +38,7 @@ export async function increment() {
 }
 
 export async function decrement() {
-  const count = readCountFromFile()
+  let count = readCountFromFile()
   count--
   writeCountToFile(count)
 

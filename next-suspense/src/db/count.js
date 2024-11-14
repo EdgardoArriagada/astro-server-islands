@@ -19,7 +19,7 @@ export async function decrement() {
 }
 
 export async function getCount() {
-  await sleep(1000)
+  await sleep(200)
 
   return read()
 }

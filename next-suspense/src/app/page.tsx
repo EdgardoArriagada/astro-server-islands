@@ -1,11 +1,12 @@
 import { Suspense } from 'react'
 import * as db from '../db/count'
 import { IncrementButton } from './components/IncrementButton'
+import { SwitchShow } from './components/SwitchShow'
 
 async function SlowComponent() {
   const count = await db.getCount()
 
-  return <div>SlowComponent {count}</div>
+  return <SwitchShow>{count}</SwitchShow>
 }
 
 export default function Home() {
